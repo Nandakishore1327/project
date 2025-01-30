@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="view.css">
+  <link rel="stylesheet" href="clear.css">
+  <title>View Expense</title>
+</head>
+<body class="view-page">
+  <header>
+    <h1>Expense Tracker</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="add.html">Add Expense</a>
+      <a href="view.html">View Expense</a>
+      <!-- <a href="settings.html">Settings</a> -->
+    </nav>
+  </header>
+
+  <main>
+    <h2>View Expense</h2>
+    <div class="table-container">
+    <table id="expenseTable">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Expense Name</th>
+          <th>Amount</th>
+          <th>Account Balance</th>
+        </tr>
+      </thead>
+      <tbody id="expenseTableBody">
+        <!-- The JavaScript code will populate this table body -->
+      </tbody>
+    </table>
+</div>
+<button id="clearButton" >Clear</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Developed by uvasri . All rights reserved.</p>
+  </footer>
+
+  <script src="view.js"></script>
+  <script src="clear.js"></script>
+</body>
+</html>

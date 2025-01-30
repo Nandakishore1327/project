@@ -1,0 +1,131 @@
+body.add {
+    background-color: #f5e6ca; /* Light cream color */
+    color: #333; /* Dark gray text color */
+  }
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    animation: moveHeader 3s infinite alternate; /* Animation added here */
+  }
+  
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1rem;
+  }
+  
+  
+  main {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Added to stack elements vertically */
+  }
+  
+  /* Centering the form elements and stacking them vertically */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Apply transition delay to each child element in main and form */
+  main > * {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  
+  main > *:nth-child(1) {
+    animation-delay: 0.5s;
+  }
+  
+  main > *:nth-child(2) {
+    animation-delay: 1s;
+  }
+  
+  main > *:nth-child(3) {
+    animation-delay: 1.5s;
+  }
+  
+  main > *:nth-child(4) {
+    animation-delay: 2s;
+  }
+  
+  /* Add some styling to the form elements */
+  label {
+    font-weight: bold;
+    margin-top: 0.5rem;
+  }
+  
+  /* Bold the "Add Expense" label */
+  label[for="addExpense"] {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="date"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    margin-bottom: 1rem;
+  }
+  
+  button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  /* The fadeIn animation for fading in elements */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Apply 3D movement to the "Add Expense" label */
+  form > *:first-child {
+    font-size: 2.5rem;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adding a subtle shadow effect for 3D effect */
+    transform: translateZ(0); /* Creating a hardware-accelerated 3D layer */
+    animation: moveAddExpense 4s infinite alternate;
+  }
+  
+  @keyframes moveAddExpense {
+    0% {
+      transform: translateX(0); /* Start from the original position */
+    }
+    100% {
+      transform: translateX(20px); /* Move the label 20 pixels to the right */
+    }
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  

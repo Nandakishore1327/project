@@ -1,0 +1,124 @@
+/* View Expense Page */
+body.view {
+    background-color: #f5e6ca; /* Light cream color */
+    color: #333; /* Dark gray text color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body fills the entire viewport height */
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    animation: moveHeader 3s infinite alternate; /* Animation added here */
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1rem;
+  }
+  
+  main {
+    flex: 1; /* Fill the remaining available space */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h2 {
+    
+    color: #333;
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transform: translateZ(0);
+    animation: moveWelcome 3s infinite alternate;
+    margin-bottom: 1rem;
+  }
+  
+  @keyframes moveWelcome {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(10px);
+    }
+  }
+  #clearButton {
+    background-color:#333; /* Coral color */
+    color:#fff; /* White text color */
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  /* Place the "Clear" button at the bottom of the page */
+  
+  
+  #clearButton {
+    margin-bottom: 20px;
+  }
+
+  
+  /* Styles for the table container */
+  .table-container {
+    flex: 1; /* Fill the remaining available space */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+  }
+  
+  /* Styles for the table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  thead {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  th, td {
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tbody tr:hover {
+    background-color: #ddd;
+  }
+  
+  /* Style for the "View Expense" heading */
+  h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  /* Sticky footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  
+  
+  
